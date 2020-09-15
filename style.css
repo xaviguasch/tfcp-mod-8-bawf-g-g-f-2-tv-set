@@ -5,26 +5,38 @@ body {
   background-color: lightgreen;
 }
 
-.my-show {
+.my-api {
+  display: grid;
+  grid-template-rows: 3rem 1rem 4rem 3rem;
+  grid-template-columns: repeat(3, calc(100% / 3));
   background-color: lightblue;
-  margin: 0.3rem;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
+.my-api-name {
+  grid-column: span 3;
+  text-align: center;
+  padding: 0.3rem;
+  font-size: 1.3rem;
+}
+.my-api-description {
+  grid-column: 1 / span 3;
+  text-align: center;
   padding: 1rem;
-  border: 0.1rem solid black;
-  border-radius: 0.4rem;
+  font-size: 1.1rem;
+  grid-row-start: 3;
+  overflow-y: auto;
+}
+.my-api-auth {
+  grid-row-start: 4;
+  grid-column: 1 / span 1;
   text-align: center;
   font-size: 1.3rem;
-  display: grid;
-  grid-template-columns: repeat(4, 25%);
-  grid-template-rows: 2rem auto;
-  grid-gap: 0.2rem;
 }
-
-.my-show-title {
-  grid-column: span 4;
-}
-
-.my-show-summary {
-  grid-column: span 4;
-  font-size: 1rem;
-  overflow-y: auto;
+.my-api-https {
+  grid-row-start: 4;
+  grid-column: 3 / span 1;
+  text-align: center;
+  font-size: 1.3rem;
 }
